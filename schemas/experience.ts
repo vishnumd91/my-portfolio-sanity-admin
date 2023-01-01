@@ -57,10 +57,10 @@ export default defineType({
       name: 'endDate',
       title: 'End Date',
       type: 'date' ,
-      hidden: ({ parent, value }) => value && parent?.current
+      hidden: ({ parent, value }) => value && parent?.isCurrent
     }),
     defineField({
-      name: 'current',
+      name: 'isCurrent',
       title: 'Currently Working here',
       type: 'boolean'
     })
