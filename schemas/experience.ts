@@ -22,31 +22,28 @@ export default defineType({
       options: {
         source: 'title',
         maxLength: 96,
-        slugify: input => input
-                         .toLowerCase()
-                         .replace(/\s+/g, '-')
-                         .slice(0, 200)
+        slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
       },
     }),
     defineField({
       name: 'companyName',
       title: 'Company Name',
-      type: 'string'
+      type: 'string',
     }),
     defineField({
       name: 'state',
       title: 'State',
-      type: 'string'
+      type: 'string',
     }),
     defineField({
       name: 'country',
       title: 'Country',
-      type: 'string'
+      type: 'string',
     }),
     defineField({
       name: 'description',
       title: 'Job Description',
-      type: 'blockContent',
+      type: 'text',
     }),
     defineField({
       name: 'startDate',
@@ -56,14 +53,14 @@ export default defineType({
     defineField({
       name: 'endDate',
       title: 'End Date',
-      type: 'date' ,
-      hidden: ({ parent, value }) => value && parent?.isCurrent
+      type: 'date',
+      hidden: ({parent, value}) => value && parent?.isCurrent,
     }),
     defineField({
       name: 'isCurrent',
       title: 'Currently Working here',
-      type: 'boolean'
-    })
+      type: 'boolean',
+    }),
   ],
   preview: {
     select: {
