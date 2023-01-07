@@ -12,8 +12,13 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'employerName',
-      title: 'Name',
+      name: 'firstName',
+      title: 'First Name',
+      type: 'string',
+    }),
+    defineField({
+      name: 'lastName',
+      title: 'LastName',
       type: 'string',
     }),
     defineField({
@@ -63,6 +68,26 @@ export default defineType({
       name: 'description',
       title: 'Description',
       type: 'text',
+    }),
+    defineField({
+      name: 'github',
+      title: 'Github URL',
+      type: 'string',
+    }),
+    defineField({
+      name: 'linkedin',
+      title: 'Linkedin URL',
+      type: 'string',
+    }),
+    defineField({
+      name: 'facebook',
+      title: 'Facebook URL',
+      type: 'string',
+    }),
+    defineField({
+      name: 'twitter',
+      title: 'Twitter URL',
+      type: 'string',
     }),
   ],
   preview: {
